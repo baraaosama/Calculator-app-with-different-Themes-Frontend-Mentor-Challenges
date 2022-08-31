@@ -1,0 +1,50 @@
+:root {
+    /*theme2*/
+
+    --t3-main-background1: hsl(268, 75%, 9%);
+    --t3-cyan: hsl(176, 100%, 44%);
+    --t3-toggle-background: hsl(268, 71%, 12%);
+    --t3-key-background: hsl(268, 47%, 21%);
+    --t3-key-shadow: hsl(290, 70%, 36%);
+    --t3-key-color: hsl(52, 100%, 62%);
+    --t3-reset-background: hsl(281, 89%, 26%);
+    --t3-reset-shadow: hsl(285, 91%, 52%);
+    --t3-equal-shadow: hsl(177, 92%, 70%);
+}
+
+/*theme3*/
+body {
+    background-color: var(--t3-main-background1);
+    color: var(--t3-key-color);
+}
+
+header .theme .shape .colors {
+    background-color: var(--t3-toggle-background);
+}
+
+.screen {
+    background-color: var(--t3-toggle-background);
+}
+
+main {
+    background-color: var(--t3-toggle-background);
+}
+
+main .row div {
+    color: var(--t3-key-color);
+    background-color: var(--t3-key-background);
+    box-shadow: 0 3px var(--t3-key-shadow);
+}
+
+main .row .del,
+main .row .reset {
+    background-color: var(--t3-reset-background);
+    box-shadow: 0 3px var(--t3-reset-shadow);
+    color: white;
+}
+
+main .row .equal {
+    background-color: var(--t3-cyan);
+    color: black;
+    box-shadow: 0 3px var(--t3-equal-shadow);
+}

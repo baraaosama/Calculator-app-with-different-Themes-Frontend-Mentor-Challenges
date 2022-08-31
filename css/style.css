@@ -1,0 +1,196 @@
+:root {
+    /*Theme 1*/
+    --t1-main-background1: hsl(222, 26%, 31%);
+    --t1-toggle-background: hsl(223, 31%, 20%);
+    --t1-red: hsl(6, 63%, 50%);
+    --t1-screen: hsl(224, 36%, 15%);
+    --t1-key-background: hsl(30, 25%, 89%);
+    --t1-key-shadow: hsl(28, 16%, 65%);
+    --t1-key-color: hsl(221, 14%, 31%);
+    --t1-reset-background: hsl(225, 21%, 49%);
+    --t1-reset-shadow: hsl(224, 28%, 35%);
+    --t1-equal-shadow: hsl(6, 70%, 34%);
+
+    /*theme2*/
+
+    --t2-main-background1: hsl(0, 0%, 90%);
+    --t2-toggle-background: hsl(0, 5%, 81%);
+    --t2-orange: hsl(25, 98%, 40%);
+    --t2-screen: hsl(0, 0%, 93%);
+    --t2-key-background: hsl(45, 7%, 89%);
+    --t2-key-shadow: hsl(35, 11%, 61%);
+    --t2-key-color: hsl(60, 10%, 19%);
+    --t2-reset-background: hsl(185, 42%, 37%);
+    --t2-reset-shadow: hsl(185, 58%, 25%);
+    --t2-equal-shadow: hsl(25, 99%, 27%);
+
+    /*theme2*/
+
+    --t3-main-background1: hsl(268, 75%, 9%);
+    --t3-cyan: hsl(176, 100%, 44%);
+    --t3-toggle-background: hsl(268, 71%, 12%);
+    --t3-key-background: hsl(268, 47%, 21%);
+    --t3-key-shadow: hsl(290, 70%, 36%);
+    --t3-key-color: hsl(52, 100%, 62%);
+    --t3-reset-background: hsl(281, 89%, 26%);
+    --t3-reset-shadow: hsl(285, 91%, 52%);
+    --t3-equal-shadow: hsl(177, 92%, 70%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan";
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    width: 400px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .theme {
+    display: flex;
+    align-items: flex-end;
+}
+
+header .theme p {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    margin-bottom: 4px;
+}
+
+header .theme .shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .theme .shape .numbers {
+    font-size: 9px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+header .theme .shape .colors {
+    width: 50px;
+    height: 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    align-items: center;
+}
+
+header .theme .shape .colors span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header .theme .shape .colors .red {
+    transition: .5s;
+    background-color: var(--t1-red);
+}
+
+header .theme .shape .colors .orange {
+    transition: .5s;
+    background-color: transparent;
+}
+
+header .theme .shape .colors .aqua {
+    transition: .5s;
+    background-color: transparent;
+}
+
+.screen {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: 700px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+main .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .row:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+main .row div {
+    width: 22%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+main .row .del,
+main .row .reset {
+    background-color: var(--t1-reset-background);
+    color: white;
+    box-shadow: 0 3px var(--t1-reset-shadow);
+    font-size: 20px;
+}
+
+main .row .reset {
+    width: 48%;
+}
+
+main .row .equal {
+    width: 48%;
+    background-color: var(--t1-red);
+    box-shadow: 0 3px var(--t1-equal-shadow);
+    color: white;
+    font-size: 25px;
+}
+
+@media (max-width:500px) {
+    .container {
+        width: 350px;
+    }
+}
